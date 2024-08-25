@@ -1,8 +1,8 @@
-;public class EvenNumPrinterV2 {
+public class EvenNumPrinterV2 {
 
     public static int printEvenNums(int num) {
         int steps = 0;
-        while (num <= 1000) {
+        while (num <= 10) {
             if (num % 2 == 0) {
                 System.out.println(num);
             }
