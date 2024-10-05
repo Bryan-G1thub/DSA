@@ -1,5 +1,10 @@
 class romanToInt {
-    public int romanToInt(String s) {
+
+public static void main(String[] args) {
+    String s = "V";
+    romanToInt(s);  
+}
+    public static int romanToInt(String s) {
         int num = 0;
         java.util.HashMap<Character, Integer> map = new java.util.HashMap<>(); 
         map.put('I',1);
@@ -41,6 +46,7 @@ class romanToInt {
             }
         
         }
+        System.out.println(num);
         return num;
     }
 }
