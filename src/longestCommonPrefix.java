@@ -7,8 +7,8 @@ class longestCommonPrefix{
         
         StringBuilder prefix = new StringBuilder();
         for(int i = 0; i <= strs.length-1; i++){
-                for(int j = 0; i<strs.length-1;i++){
-                    if(strs[i].charAt(j) == strs[i+1].charAt(j)){
+                for(int j = 0; i<strs[i].length()-1;i++){
+                  if(j != strs[i].length()-1 && strs[i].charAt(j) == strs[i+1].charAt(j)){
                         prefix.append(strs[i].charAt(j));
                     }
                     else{
