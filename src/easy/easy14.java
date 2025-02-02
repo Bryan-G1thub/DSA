@@ -1,4 +1,4 @@
-//
+//O(n*m^2)
 import java.util.Arrays;
 public class easy14{
     public static void main(String[] args) {
