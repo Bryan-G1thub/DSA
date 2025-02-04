@@ -1,3 +1,4 @@
+package easy;
 //O(n*m^2)
 import java.util.Arrays;
 public class easy14{

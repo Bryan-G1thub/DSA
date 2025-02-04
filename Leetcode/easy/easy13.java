@@ -1,3 +1,4 @@
+package easy;
 class easy13 {
 
 public static void main(String[] args) {

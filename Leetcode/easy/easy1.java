@@ -1,7 +1,5 @@
-/*
-TWO SUM
-COMPLETED O(n)
-*/
+package easy;
+/*TWO SUM COMPLETED O(n)*/
 
 import java.util.*;
 public class easy1{
