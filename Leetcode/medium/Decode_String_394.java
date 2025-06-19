@@ -4,7 +4,7 @@ import java.util.Stack;
 
 public class Decode_String_394 {
     public static void main(String[] args) {
-        String input = "322";
+        String input = "21[abc]3[cd]ef";
         System.out.println(decodeStirng(input));
     }
     public static String decodeStirng(String input){
@@ -23,13 +23,16 @@ public class Decode_String_394 {
                 currentStr = "";   
             }
             else if(c==']'){
-                //pop from both stacks
-                //currentStr = lastStr + currentStr * num
+                int count = numStack.pop();
+                String lastStr = strStack.pop();
+                StringBuilder temp = new StringBuilder(lastStr);
+                temp.append(currentStr.repeat(count));
+                currentStr = temp.toString();
             }
             else {
-                //Normal character, append to currentStr
+                currentStr += c;
             }
         }
-        return null;
+        return currentStr;
     }
 }
