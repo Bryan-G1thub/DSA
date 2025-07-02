@@ -7,7 +7,7 @@ public class Evaluate_Reverse_Polish_Notation_150 {
     String[] tokens = {"10","6","9","3","+","-11","*","/","*","17","+","5","+"};
     System.out.println(evalRPN(tokens));
     }   
-    public static int evalRPN(String[] tokens){
+    private static int evalRPN(String[] tokens){
         Stack<Integer> stack = new Stack<>();
 
         for(String token : tokens){
@@ -36,6 +36,6 @@ public class Evaluate_Reverse_Polish_Notation_150 {
             stack.push(intToken);
             }
         }
-        return stack.pop();;
+        return stack.pop();
     }
 }
