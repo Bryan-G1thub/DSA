@@ -15,11 +15,11 @@ public class Number_of_Students_Unable_to_Eat_Lunch_1700 {
     public static int countStudentsOPTIMIZED(int[] students, int[] sandwiches){
         Stack<Integer> SAMMICH_STACK = new Stack<>();
         Queue<Integer> STUDENT_QUEUE = new LinkedList<>();
-        for(int i = 0; i<students.length; i++){
-            if(students[i]!=sandwiches[i]){
-                STUDENT_QUEUE.add(students[i]);
-                SAMMICH_STACK.add(sandwiches[sandwiches.length-1-i]);
-            }
+        for(int s : students){
+            STUDENT_QUEUE.add(s);
+        }
+        for(int i = sandwiches.length - 1; i>=0; i--){
+            SAMMICH_STACK.add(sandwiches[i]);
         }
         int rotations = 0;
         while (!STUDENT_QUEUE.isEmpty() && !SAMMICH_STACK.isEmpty()){
@@ -28,8 +28,14 @@ public class Number_of_Students_Unable_to_Eat_Lunch_1700 {
                  SAMMICH_STACK.pop();
                  rotations = 0;
             }
-            else if()
-        return STUDENT_QUEUE.size();
+            else{
+                STUDENT_QUEUE.add(STUDENT_QUEUE.poll());
+                rotations++;
+            }
+            if(rotations== STUDENT_QUEUE.size()){
+                break;
+            }
         }
+        return STUDENT_QUEUE.size();
     }
 }
